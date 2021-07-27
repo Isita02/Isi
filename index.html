@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-in">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bhuribhoj</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="slider()">
+ <div class="banner">
+     <div class="slider">
+<img src="f.jpg" id="slideimg" >
+     </div>
+     <div class="overlay">
+        <div class="content">
+            <h1>BHURIBHOJ</h1>
+            <div>
+               <a href="contact.html"> <button type="button">LOCATION</button></a>
+                
+               <a href="home.html">  <button type="button" class="btn-2">CONTACT </button></a>
+            </div>
+        </div>
+         
+     </div>
+     
+
+ </div>  
+ <script>
+     var slideimg = document.getElementById("slideimg");
+     var images = new Array(
+         "c.jpeg",
+         "f.jpg",
+         "j.jpeg",
+         "t.jpg"
+     );
+     var len = images.length;
+     var i = 0;
+
+     function slider (){
+         if(i > len-1){
+             i = 0;
+         }
+         slideimg.src = images[i];
+         i++;
+         setTimeout('slider()',3000);
+     }
+ </script> 
+</body>
+</html>
